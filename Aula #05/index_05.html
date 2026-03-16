@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Texto subscrito</h2>
+    <p> vamos demonstrar o texto subescrito com a formula da agua
+    H<sub>2</sub>0</p>
+    <h2>Trecho de código fonte</h2>
+    <p>Neste exemplo vou demonstrar um trecho de código</p>
+    <p> inserido o comando <code>document.getElementByID ('edCodigo')</code> que é um comando java script </p>
+
+    <pre>
+        <code>function resolverBhaskara(a, b, c) {
+  // 1. Verificar se é uma equação do 2º grau
+  if (a === 0) {
+    return "O coeficiente 'a' deve ser diferente de zero.";
+  }
+
+  // 2. Calcular o discriminante (Delta)
+  const delta = b * b - 4 * a * c;
+  console.log(`Delta: ${delta}`);
+
+  // 3. Analisar o Delta e calcular as raízes
+  if (delta > 0) {
+    // Duas raízes reais e diferentes
+    const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+    const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+    return { x1: x1.toFixed(2), x2: x2.toFixed(2), tipo: "reais e diferentes" };
+  } else if (delta === 0) {
+    // Uma raiz real (duas raízes iguais)
+    const x = -b / (2 * a);
+    return { x1: x.toFixed(2), x2: x.toFixed(2), tipo: "reais e iguais" };
+  } else {
+    // Raízes complexas (delta negativo)
+    const parteReal = (-b / (2 * a)).toFixed(2);
+    const parteImaginaria = (Math.sqrt(-delta) / (2 * a)).toFixed(2);
+    return { 
+      x1: `${parteReal} + ${parteImaginaria}i`, 
+      x2: `${parteReal} - ${parteImaginaria}i`, 
+      tipo: "complexas" 
+    };
+  }
+}
+
+// Exemplo de uso: x² - 7x + 12 = 0
+const resultado = resolverBhaskara(1, -7, 12);
+console.log(resultado);
+</code>
+    </pre>
+</body>
+
+</html>
